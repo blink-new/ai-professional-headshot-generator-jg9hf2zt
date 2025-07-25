@@ -91,7 +91,7 @@ export default function HeadshotWizard({ user, onComplete, onBack }: HeadshotWiz
         generatedImages: JSON.stringify(imageUrls)
       })
       
-      const generationRecord = await blink.db.headshotGenerations.create({
+      const generationRecord = await blink.db.headshot_generations.create({
         userId: user.id,
         style: selectedStyle,
         background: selectedBackground,

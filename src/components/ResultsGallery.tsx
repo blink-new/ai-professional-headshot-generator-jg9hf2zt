@@ -27,7 +27,7 @@ export default function ResultsGallery({ user, onBack, onNewGeneration }: Result
 
   const loadGenerations = useCallback(async () => {
     try {
-      const results = await blink.db.headshotGenerations.list({
+      const results = await blink.db.headshot_generations.list({
         where: { userId: user.id },
         orderBy: { createdAt: 'desc' }
       })
